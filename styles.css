@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f8fa;
+    color: #333;
+}
+
+header {
+    background-color: #24292e;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+nav {
+    background-color: #0366d6;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #0582ca;
+    border-radius: 5px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.main-content h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #24292e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    clear: both; /* Add this property to fix footer positioning */
+}
+
+/* Contact page specific styles */
+.contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+}
+
+.image-section {
+    display: grid;
+    place-items: center;
+    height: 70vh; /* Adjust the height as needed */
+}
+
+.partner-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.partner-details {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.partner-details p {
+    margin-bottom: 8px;
+}

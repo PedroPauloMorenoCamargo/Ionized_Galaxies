@@ -1,0 +1,12 @@
+        /* Your additional inline styles can go here */
+        /* Add specific styles for the About page if needed */
+        .main-content {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .main-content h2 {
+            margin-top: 0;
+        }
