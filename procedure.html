@@ -81,38 +81,102 @@
                         href="https://webbtelescope.org/contents/media/images/01F8GF8DK2PRY4FP9DA2XPQC8S">JWST</a>
                 </p>
                 <h3>
-                    Here is an example of Good Images:
+                    Here is an example of a high-quality input image and its corresponding processing pipeline
                 </h3>
                 <div class="image-section3">
                     <img src="img/good_exemple/input.png" alt="Partners">
                 </div>
+                <p>
+                    The image above serves as an ideal input due to the minimal presence of smaller galaxies. It is a
+                    clean image, with the primary focus on the galaxy positioned prominently at the center, making it
+                    conducive for analysis.
+                </p>
                 <div class="image-section3">
                     <img src="img/good_exemple/gray.png" alt="Partners">
                 </div>
+                <p>To leverage Fourier transform in image processing, it is imperative to convert the image to
+                    grayscale.</p>
                 <div class="image-section3">
                     <img src="img/good_exemple/mag.png" alt="Partners">
                 </div>
+                <p>
+                    The magnitude spectrum in the context of Fourier transform refers to a representation of the
+                    magnitudes of the various frequency components present in an image. When an image undergoes Fourier
+                    transformation, it is transformed from its spatial domain to its frequency domain. The magnitude
+                    spectrum graphically illustrates the amplitudes or strengths of different frequencies that
+                    contribute to the overall composition of the image.
+                </p>
+                <p>
+                    In simpler terms, the magnitude spectrum provides a visual insight into the intensity or importance
+                    of different frequency patterns within the image. Higher peaks in the spectrum indicate dominant
+                    frequencies, helping analysts identify key features and patterns present in the image.
+                </p>
                 <div class="image-section3">
                     <img src="img/good_exemple/horizontal.png" alt="Partners">
                 </div>
+                <p>
+                    The horizontal profile graphics illustrate the magnitude as a function of the frequencies
+                    identified. As we plan to apply a passband filter, these graphics serve as a valuable tool for
+                    visualizing the frequency limits that will be targeted. By examining this profile, it becomes easier
+                    to identify the specific range of frequencies where the filter will be applied, aiding in the
+                    precise determination of the passband for further processing.
+                </p>
                 <div class="image-section3">
                     <img src="img/good_exemple/mask.png" alt="Partners">
                 </div>
+                <p>
+
+                    The mask is the outcome of filtering the magnitude spectrum with the user-selected frequencies. To
+                    ensure a smooth transition and avoid abrupt changes, a Gaussian smoothing was applied to the mask.
+                    This additional step contributes to a more refined and visually coherent result in the frequency
+                    domain, providing a foundation for subsequent processing steps.
+                </p>
                 <div class="image-section3">
                     <img src="img/good_exemple/img_back.png" alt="Partners">
                 </div>
+                <p>
+
+                    The "image back" represents the outcome of filtering the grayscale image using the previously
+                    generated mask. With this step, the processing is nearing completion, revealing the areas of
+                    interest defined by the user-selected frequencies. The application of the mask to the grayscale
+                    image emphasizes specific features within the frequency domain, contributing to the identification
+                    and isolation of relevant information in the overall image.
+                </p>
                 <div class="image-section3">
                     <img src="img/good_exemple/sobel.png" alt="Partners">
                 </div>
+                <p>
+                    The Sobel filter utilizes derivatives to compute the edges in the image, highlighting contours in
+                    the processed "image back." This step enhances the visibility of sharp transitions in intensity,
+                    aiding in the identification of distinct features and boundaries within the image.
+                </p>
+                <p>
+                    Additionally, following the Sobel operation, an algorithm called skeletonize is applied. This
+                    algorithm utilizes image morphology to streamline the Sobel's output into a single, continuous
+                    contour. This process condenses the Sobel's detailed output, preparing the image for the final steps
+                    in the processing pipeline.
+                </p>
                 <div class="image-section3">
                     <img src="img/good_exemple/blended.png" alt="Partners">
                 </div>
+                <p> The concluding step involves combining the input image with the skeletonized contour, resulting in
+                    the display of the final output. This is achieved by utilizing an additive weighting for both
+                    images. The weighted combination ensures a harmonious integration of the original image and the
+                    enhanced contour, providing a comprehensive and visually informative representation in the ultimate
+                    result.
+                </p>
                 <h3>
                     Here is an example of Bad Images:
                 </h3>
                 <div class="image-section3">
                     <img src="img/bad_exemple/input.png" alt="Partners">
                 </div>
+                <p>
+
+                    This serves as a less-than-ideal example of an input image due to the presence of numerous smaller
+                    galaxies surrounding the primary image. It is recommended to avoid using such images as input for
+                    more optimal and accurate results in your processing pipeline.
+                </p>
                 <div class="image-section3">
                     <img src="img/bad_exemple/gray.png" alt="Partners">
                 </div>
@@ -134,6 +198,14 @@
                 <div class="image-section3">
                     <img src="img/bad_exemple/blended.png" alt="Partners">
                 </div>
+                <p>
+
+                    Following the entire processing pipeline with a suboptimal input image may result in numerous small
+                    contours appearing around the main image. This can be counterproductive and, to mitigate this issue,
+                    it is advisable to consider cropping the image and eliminating these extraneous elements. Doing so
+                    will enhance the clarity of the final output and contribute to a more meaningful and accurate
+                    representation.
+                </p>
             </section>
         </div>
 
